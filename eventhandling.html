@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<style>
+
+
+    .container{
+        background-color: white;
+        border-radius: 5px;
+        text-align: center;
+        margin: auto;
+        width: 900px;
+        height: 500px;
+
+    }
+
+    .button{
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        color: black;
+        background-color: pink;
+        cursor: pointer;
+    }
+
+    .button:hover{
+        background-color: beige;
+        color: black;
+    }
+
+    #mydiv{
+        width:100px;
+        height: 100px;
+        background: aquamarine;
+        transition: width 2s;
+        margin: auto;
+    }
+
+    #mydiv:hover{
+        background-color: pink;
+        width:400px;
+    }
+
+    input[type=text],input[type=password]{
+        width: 30%;
+        height:30px;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: center;
+
+    }
+
+    .flexbox{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        background-color: aliceblue;
+    }
+
+    .flexbox > div{
+        background-color: white;
+        color: black;
+        padding: 20px;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    @media screen and (max-width:800px) {
+        .container{
+            flex-direction: column;
+        }
+        .flexbox{
+            flex-direction: column;
+        }
+
+        #mydiv{
+            flex-direction: column;
+        }
+    }
+
+
+
+
+</style>
+<body bgcolor="pink">
+    <div class="container">
+        <div class="flexbox">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p id="demo"></p>
+        <h1>JAVA EVENT HANDLING</h1>
+        <br><button class="button" onclick="document.getElementById('demo').innerHTML=Date()">Date</button>
+        <div id="mydiv">
+            <p>Hover over me</p>
+
+        </div>
+        <div>
+            <p id="sum"></p>
+        <br><label>Enter name</label><br>
+        <input type="text" placeholder="Enter name" name="name" required autocomplete="on"><br>
+        <button class="button" onclick="myfunctionn()">Submit?</button>
+    </div>
+
+    </div>
+</body>
+<script>
+    document.getElementById("mydiv").addEventListener("transitionend",myfucntion);
+    function myfucntion(){
+        this.innerHTML="transition complete";
+        this.style.backgroundColor="aliceblue";
+    }
+
+    function myfunctionn(){
+        window.confirm("Submit?")
+    }
+</script>
+</html>

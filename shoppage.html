@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Passions Conflict' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oleo Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oooh Baby' rel='stylesheet'>
+    <link rel="stylesheet" href="nirystyle.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+<body>
+  <div class="container">
+    <button type="submit" class="right" onclick="window.location.href = 'login.html';" >Login</button>
+    <button type="submit" class="right" onclick="window.location.href = 'signup.html';" >Signup</button>
+    <div class="searchbox">
+      <input type="text" placeholder="Search">
+      <ion-icon name="search-outline"></ion-icon>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- <button class="btn"><i class="fa fa-search"></i></button> -->
+    <center><a class="text" >Niryy </a></center>
+  </div> 
+  
+  <script>
+    /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      </script>
+
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+    
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#">Account</a>
+        <a href="#">Shopping Bag</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Order tracking</a>
+      </div>
+    
+    </div>
+    
+    <!-- Use any element to open/show the overlay navigation menu -->
+  
+
+  <script>
+              function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+          
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].style.backgroundColor = "";
+            }
+          
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+          
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+          }
+          
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
+
+
+
+        </script>
+  <ul>
+    <div class="container1" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+        document.getElementById("myNav").style.width = "100%";
+
+      }
+      </script>
+  
+  
+    <li><a class="active" href="http://127.0.0.1:5501/index.html">Home</a></li>
+    <li><a href="http://127.0.0.1:5501/shoppage.html">Shop</a></li>
+    <li><a href="#totebags">Totebags</a></li>
+    <li><a href="#tshirts">Tshirts</a></li>
+    <li><a href="#hoodies">Hoodies</a></li>
+   </ul>
+
+   <div class="shop">Shop for the latest items in the store</div>
+   <!-- <div class="products">
+      <div ><img src="product1.png" />
+        <button type="submit" class="probtn">Buy now</button>
+      </div>
+        <div ><img src="product2.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+          <div ><img src="product3.png" />
+            <button type="submit" class="probtn">Buy now</button>
+          </div>
+  
+          
+    </div>
+    <div class="products">
+      <div ><img src="product4.png" />
+        <button type="submit" class="probtn">Buy now</button>
+      </div>
+      <div ><img src="product5.png" />
+        <button type="submit" class="probtn">Buy now</button>
+      </div>
+      <div ><img src="product6.png" />
+        <button type="submit" class="probtn">Buy now</button>
+      </div>
+  
+          
+    </div> -->
+
+    <div id="content">
+      <div class="products">
+        <div ><img src="product1.png" />
+          <button type="submit" class="probtn" onclick="window.location.href = 'productdesc.html';">Buy now</button>
+        </div>
+          <div ><img src="product2.png" />
+            <button type="submit" class="probtn">Buy now</button>
+          </div>
+            <div ><img src="product3.png" />
+              <button type="submit" class="probtn">Buy now</button>
+            </div>
+    
+            
+      </div>
+      <div class="products">
+        <div ><img src="product4.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+        <div ><img src="product5.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+        <div ><img src="product6.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+    
+            
+      </div>
+
+      <div class="products2" id="moreItem">
+        <div ><img src="product1.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+        <div ><img src="product2.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+        <div ><img src="product3.png" />
+          <button type="submit" class="probtn">Buy now</button>
+        </div>
+    
+            
+      </div>
+    </div>
+    <center><button id="load-more">Load More</button></center>
+    <script>
+        let loadMoreBtn=document.querySelector('#load-more');
+        let currentItem=3;
+
+        loadMoreBtn.onclick=() =>{
+          // let boxes=[...document.querySelectorAll('.products2')];
+          // for(var i=currentItem; i< currentItem; i++){
+          //   boxes[i].style.display='inline-block';
+          // }
+          // currentItem+=3;
+          console.log('nidhii')
+          const content=document.getElementById('moreItem');
+          content.style.display="flex"
+          loadMoreBtn.style.display="none";
+        }
+    </script>
+
+<div class="follow">
+  <div>
+    <img src="logo.png" alt="logo">
+    <div style="font-family: Nunito;color: #7e7d7d;font-size: 12px">
+      Follow us<br>
+      Thanks for visiting our website! Follow us on social media  
+      for our updates on our latest products, promotions and more.
+      Thanks for supporting Niryy! 
+    </div>
+  </div>
+  <div id="follow__container2">
+    <div>STORE</div>
+    <div><a href="#contactus">Contact Us</a></div>
+    <div><a href="#aboutus">About Us</a></div>
+    <div><a href="#refund">Refund Policy</a></div>
+    <div><a href="#order">Order Tracking</a></div>
+  </div>
+
+  
+
+</body>
+</html>

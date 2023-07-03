@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niryy login page</title>
+    <link href='https://fonts.googleapis.com/css?family=Passions Conflict' rel='stylesheet'>
+    <style>
+    Body {  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-color: white;  
+    }
+    button{
+        background-color: rgb(255, 153, 255);
+        width: 20%;
+        color: black;
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+    }
+ 
+    input[type=text], input[type=password],input[type=number] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid rgb(59, 58, 58);   
+        box-sizing: border-box;   
+    } 
+    button:hover {   
+        opacity: 0.7;   
+    } 
+    .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }
+    .container {   
+        padding: 25px;     
+    }
+    .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    }
+
+    img.avatar {
+    width: 10%;
+    border-radius: 70%;
+    }
+
+    body {
+        background-image: url('bg3.jpg');
+        background-repeat: no-repeat;
+      }
+
+    .login{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 15px;
+    color:grey;
+    cursor: pointer;
+    }
+</style> 
+</head>
+<body>
+    <center><img src="logo1.png" alt="Avatar" class="avatar"></center>
+    <center> <p style="font-family:Passions Conflict;font-size: 70px;">Niryy</p> </center>
+    <form name="signupform" onsubmit="Validationm(event)"  class="Body">  
+        <div class="container">   
+            <label>Firstname : </label>   
+            <input type="text" placeholder="Enter Firstname" name="firstname" required> 
+            <label>Lastname : </label>   
+            <input type="text" placeholder="Enter Lastame" name="lastname" required> 
+            <label>Mobile number : </label> <br>
+            <input type="number" placeholder="Enter Mobile number" name="Mnum" required > 
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required> 
+            <input type="password" placeholder="Confirm password" name="password2" required>  
+            <button type="submit"  autofocus>Signup</button>   
+            <input type="checkbox" checked="checked"> Remember me   
+            <button type="button" class="cancelbtn"> Cancel</button>     
+            <center><br><label class="login" onclick="window.location.href = 'loginformvalidation.html';">Already have an account?</label></center>
+        </div>   
+    </form> 
+
+    <script>
+        function Validationm(event) {
+            event.preventDefault()
+        let fname = document.forms["signupform"]["firstname"];
+        let lname= document.forms["signupform"]["lastname"];
+        let phoneNumber = document.forms["signupform"]["Mnum"];
+        let pass = document.forms["signupform"]["password"];
+        let pass2 = document.forms["signupform"]["password2"];
+        // console.log("nidhi")
+        if(fname.value == "") {
+          alert("Please enter your first name.");
+          username.focus();
+          return false;
+        }
+        if(lname.value == "") {
+          alert("Please enter your last name");
+          email.focus();
+          return false;
+        }
+        // if(email.value.indexOf("@", 0) < 0) {
+        //   alert("Please enter a valid e-mail address.");
+        //   email.focus();
+        //   return false;
+        // }
+        // if(email.value.indexOf(".", 0) < 0) {
+        //   alert("Please enter a valid e-mail address.");
+        //   email.focus();
+        //   return false;
+        // }
+        if(phoneNumber.value == "") {
+          alert("Please enter your telephone number.");
+          phoneNumber.focus();
+          return false;
+        }
+        if(phoneNumber.value.length<10) {
+          alert("Please enter valid telephone number.");
+          phoneNumber.focus();
+          return false;
+        }
+        if(pass.value!=pass2.value) {
+          alert("Please enter the same password");
+          pass.focus();
+          return false;
+        }
+        // if(select.selectedIndex < 1) {
+        //   alert("Please enter your course.");
+        //   select.focus();
+        //   return false;
+        // }
+
+        window.location.href="loginformvalidation.html";
+        return true;
+      }
+    </script>
+
+</body>
+</html>
+
